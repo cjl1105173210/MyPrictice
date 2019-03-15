@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.test.webviewprictice.R;
-
+/*webview练习*/
 
 public class NativeAndJsTestActivity extends AppCompatActivity {
 
