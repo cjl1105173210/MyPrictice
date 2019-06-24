@@ -1,4 +1,4 @@
-package com.example.test.webviewprictice;
+package com.example.test.MyPrictice;
 
 import org.junit.Test;
 

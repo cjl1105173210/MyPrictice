@@ -1,4 +1,4 @@
-package com.example.test.webviewprictice;
+package com.example.test.MyPrictice;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -3,8 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.test.webviewprictice"
-        minSdkVersion 14
+        applicationId "com.example.MyPrictice"
+        minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,12 @@ android {
         }
     }
     buildToolsVersion '27.0.3'
+
+    compileOptions {
+        //就算您使用 AndroidStudio v3.0, 也需要配置以下参数
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -26,4 +32,26 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.zyao89:zloading:1.0.11'
+
+
+    implementation 'me.jessyan:arms:2.5.0'
+//想使用 Glide 请依赖 arms-imageloader-glide 扩展库, 使用方式请看 #4.1
+    implementation 'me.jessyan:arms-imageloader-glide:2.5.0'
+//想使用 AndroidAutoLayout 请依赖 arms-autolayout 扩展库, 使用方式请查看 #4.2
+    implementation 'me.jessyan:arms-autolayout:2.5.0'
+    testImplementation rootProject.ext.dependencies["junit"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["autolayout"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    implementation rootProject.ext.dependencies["androideventbus"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    //Butterknife 插件, 很多人因为没加这个而报错, 切记!!!
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]//依赖插件
+    implementation 'me.jessyan:autosize:x.y.z'
+    implementation rootProject.ext.dependencies["autosize"]
+
 }
